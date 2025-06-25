@@ -84,6 +84,9 @@ __docker__/  # if using a docker folder
 .DS_Store
 
 # Windows
+
+# artifacts
+# logs
 Thumbs.db
 ehthumbs.db
 Desktop.ini

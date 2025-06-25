@@ -1,6 +1,8 @@
 from src.datascience import logger
 from src.datascience.components.data_ingestion import DataIngestion
 from src.datascience.components.data_validation import DataValidation
+from src.datascience.components.data_transformation import DataTransformation
+from src.datascience.components.model_trainer import ModelTrainer
 from src.datascience.config.configuration import ConfigurationManager
 
 config = ConfigurationManager()  # create the manager
@@ -10,8 +12,16 @@ config = ConfigurationManager()  # create the manager
 # di.run()
  
 
-data_validation_config = config.get_data_validation_config()
+# data_validation_config = config.get_data_validation_config()
 
 
-dv = DataValidation(config=data_validation_config)
-dv.run_validation()
+# dv = DataValidation(config=data_validation_config)
+# dv.run_validation()
+
+# data_transformation_config = config.get_data_transformation_config()
+# dt = DataTransformation(config=data_transformation_config)
+# dt.run()
+
+model_trainer_config = config.get_model_trainer_config()
+mt = ModelTrainer(config=model_trainer_config)
+mt.run()
