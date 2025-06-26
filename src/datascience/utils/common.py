@@ -35,7 +35,7 @@ def create_directories(dir_paths: list, verbose: bool = True):
             raise
 
 @ensure_annotations
-def save_json(path: Path, data: dict) -> None:
+def save_json(path: Path, data: dict) -> type(None):
     try:
         with open(path, 'w') as f:
             json.dump(data, f, indent=4)
